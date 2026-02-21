@@ -1,101 +1,101 @@
 ﻿# Niigata Private Guide
-## 通訳案内士サービス（新潟県限定）
+## Licensed Interpreter Guide Service (Niigata Prefecture Only)
 
-### 海外から新潟へ来る方へ
-英語でわかりやすくご案内します。  
-ゆっくり・はっきり・丁寧に説明します。
+### For international visitors to Niigata
+Clear and friendly English guidance for Western guests.
+Slow pace and easy explanations are available for senior travelers.
 
-- 対応地域：新潟県内のみ
-- 対応言語：英語（欧米ゲスト向け）
-- 対象：ご夫婦・ご家族・シニア旅行者・少人数グループ
-
----
-
-## 3つの人気ルートと料金
-
-### 1. 新潟市 文化と食ルート（半日）
-**内容**  
-白山神社、旧齋藤家別邸、古町エリア、地元ランチ
-
-**所要時間**  
-約4時間
-
-**料金（1組）**  
-¥36,000（1〜4名）
-
-**こんな方におすすめ**  
-長く歩かず、街の歴史と食を楽しみたい方
+- Service area: Niigata Prefecture only
+- Language: English
+- Group type: Couples, families, senior travelers, and small private groups
 
 ---
 
-### 2. 弥彦・寺泊 海と信仰ルート（1日）
-**内容**  
-弥彦神社、ロープウェイ（天候次第）、寺泊魚の市場通り
+## Three Popular Routes and Prices
 
-**所要時間**  
-約8時間
+### 1. Niigata City Culture and Food Route (Half Day)
+**Highlights**
+Hakusan Shrine, Former Saito Family Residence, Furumachi walking area, local lunch
 
-**料金（1組）**  
-¥62,000（1〜4名）
+**Duration**
+About 4 hours
 
-**こんな方におすすめ**  
-景色・神社・海産物をバランスよく楽しみたい方
+**Price (per group)**
+JPY 36,000 (1 to 4 guests)
 
----
-
-### 3. 佐渡島 世界遺産ストーリールート（1日）
-**内容**  
-両津港発着、佐渡金山（または関連文化施設）、宿根木集落
-
-**所要時間**  
-約9時間（フェリー時間を除く）
-
-**料金（1組）**  
-¥78,000（1〜4名）
-
-**こんな方におすすめ**  
-新潟らしい歴史と特別な景観をじっくり体験したい方
+**Best for**
+Guests who want history and food with shorter walking distance
 
 ---
 
-## 料金に含まれるもの
+### 2. Yahiko and Teradomari Coast Route (Full Day)
+**Highlights**
+Yahiko Shrine, mountain view area, Teradomari fish market street
 
-- 通訳案内士ガイド料
-- 事前ヒアリング
-- 当日の行程サポート
+**Duration**
+About 8 hours
 
-## 料金に含まれないもの
+**Price (per group)**
+JPY 62,000 (1 to 4 guests)
 
-- 交通費（車・電車・船）
-- 入館料
-- 飲食代
-- フェリー代（佐渡ルート）
-
----
-
-## 見やすさへの配慮（シニア向け対応）
-
-- 難しい言葉を使わない説明
-- 文字が大きい資料を準備可能
-- 休憩を多めに入れる行程調整
-- 歩行距離を短くしたプラン提案
+**Best for**
+Guests who want scenic views, shrine culture, and seafood in one day
 
 ---
 
-## ご予約の流れ
+### 3. Sado Island Heritage Route (Full Day)
+**Highlights**
+Ryotsu Port area, Sado Gold Mine related site, Shukunegi village
 
-1. お問い合わせ
-2. ご希望日・人数・体力レベルを確認
-3. 最適ルートをご提案
-4. お見積り確定
-5. 当日ご案内
+**Duration**
+About 9 hours (ferry time excluded)
+
+**Price (per group)**
+JPY 78,000 (1 to 4 guests)
+
+**Best for**
+Guests who want a unique historical and scenic experience
 
 ---
 
-## お問い合わせ
+## Included in the Price
+
+- Licensed guide interpreter fee
+- Pre-tour consultation
+- Day-of itinerary support
+
+## Not Included
+
+- Transport cost (car, train, ferry)
+- Entrance fees
+- Meals and drinks
+- Ferry tickets for Sado route
+
+---
+
+## Senior-Friendly Support
+
+- Easy words and clear explanations
+- Large text itinerary available on request
+- Extra breaks can be included
+- Shorter walking options available
+
+---
+
+## Booking Flow
+
+1. Contact us
+2. Share date, group size, and physical comfort level
+3. Receive recommended route and quote
+4. Confirm booking
+5. Enjoy your guided day in Niigata
+
+---
+
+## Contact
 
 - Email: guide.niigata@example.com
 - Tel: 025-000-0000
-- 受付時間：9:00-18:00
+- Reception: 9:00-18:00
 
-新潟の魅力を、わかりやすい英語で丁寧にご案内します。
+Discover Niigata in clear English with a comfortable private pace.

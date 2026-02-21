@@ -28,9 +28,10 @@ body {
 body {
 	font-family: var(--font-body);
 	background:
-		radial-gradient(1100px 480px at 15% -5%, #dcebdd 0%, transparent 60%),
-		radial-gradient(980px 450px at 100% 0%, #f4e9dc 0%, transparent 62%),
-		var(--bg);
+		linear-gradient(rgba(246, 243, 234, 0.9), rgba(246, 243, 234, 0.9)),
+		url('/images/niigata-yahiko-shrine.jpg') left -120px top 80px / 28vw auto no-repeat fixed,
+		url('/images/niigata-sado-gold-mine.jpg') right -120px bottom 40px / 30vw auto no-repeat fixed,
+		url('/images/niigata-bandai-bridge.jpg') center center / cover no-repeat fixed;
 	color: var(--ink);
 	font-size: 18px;
 	line-height: 1.8;
@@ -213,6 +214,55 @@ p {
 	margin-top: 8px;
 }
 
+.scenic-section {
+	padding-top: 32px;
+}
+
+.scenic-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(200px, 1fr));
+	gap: 16px;
+}
+
+.scenic-card {
+	position: relative;
+	min-height: 220px;
+	border-radius: var(--radius);
+	padding: 18px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	color: #fff;
+	overflow: hidden;
+	box-shadow: var(--shadow);
+	border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.scenic-card::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to top, rgba(16, 26, 35, 0.74), rgba(16, 26, 35, 0.16));
+}
+
+.scenic-card h3,
+.scenic-card p {
+	position: relative;
+	z-index: 1;
+}
+
+.scenic-city {
+	background: url('/images/niigata-bandai-bridge.jpg') center / cover no-repeat;
+}
+
+.scenic-yahiko {
+	background: url('/images/niigata-yahiko-shrine.jpg') center / cover no-repeat;
+}
+
+.scenic-sado {
+	background: url('/images/niigata-sado-gold-mine.jpg') center / cover no-repeat;
+}
+
 .section-copy {
 	color: var(--ink-soft);
 	margin-bottom: 20px;
@@ -274,6 +324,38 @@ p {
 
 .highlights li + li {
 	margin-top: 4px;
+}
+
+.drive-route {
+	margin: 0;
+	padding-left: 22px;
+}
+
+.drive-route li + li {
+	margin-top: 4px;
+}
+
+.drive-meta {
+	margin-top: 10px;
+	color: var(--ink-soft);
+}
+
+.map-link {
+	display: inline-flex;
+	align-items: center;
+	margin-top: 8px;
+	padding: 8px 12px;
+	border-radius: 999px;
+	border: 1px solid var(--accent);
+	color: var(--accent);
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 0.92rem;
+}
+
+.map-link:hover,
+.map-link:focus-visible {
+	background: var(--accent-soft);
 }
 
 .ideal-for {
@@ -344,6 +426,7 @@ p {
 }
 
 @media (max-width: 1000px) {
+	.scenic-grid,
 	.route-grid,
 	.detail-grid {
 		grid-template-columns: 1fr 1fr;
@@ -364,6 +447,7 @@ p {
 	}
 
 	.hero-grid,
+	.scenic-grid,
 	.route-grid,
 	.detail-grid {
 		grid-template-columns: 1fr;
