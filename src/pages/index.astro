@@ -1,215 +1,292 @@
----
+﻿---
 import '../styles/global.css';
 
 const routes = [
-	{
-		nameJa: '新潟市 文化と食ルート',
-		nameEn: 'Niigata City Culture & Food',
-		duration: '4時間（半日）',
-		price: '36,000円 / 1組（1-4名）',
-		meeting: 'JR新潟駅 または 新潟市内ホテル',
-		season: '通年',
-		walking: '少なめ（1.5km目安）',
-		highlights: ['白山神社', '旧齋藤家別邸', '古町の街歩き', '新潟名物ランチ案内'],
-		idealFor: 'はじめて新潟を訪れる方、長距離を歩きたくない方',
-	},
-	{
-		nameJa: '弥彦・寺泊 海と信仰ルート',
-		nameEn: 'Yahiko Shrine & Teradomari Coast',
-		duration: '8時間（1日）',
-		price: '62,000円 / 1組（1-4名）',
-		meeting: 'JR新潟駅 または 新潟市内ホテル',
-		season: '春-秋（冬は天候次第）',
-		walking: 'ふつう（3km目安）',
-		highlights: ['彌彦神社', '弥彦山周辺の景観', '寺泊魚の市場通り', '海鮮ランチ案内'],
-		idealFor: '自然、神社、海の景色をバランスよく楽しみたい方',
-	},
-	{
-		nameJa: '佐渡島 歴史と絶景ルート',
-		nameEn: 'Sado Island Gold & Heritage',
-		duration: '9時間（島内ガイド時間）',
-		price: '78,000円 / 1組（1-4名）',
-		meeting: '両津港',
-		season: '春-秋推奨',
-		walking: 'ふつう（2.5km目安）',
-		highlights: ['佐渡金山関連スポット', '宿根木集落', '海岸ドライブ', '地元料理の案内'],
-		idealFor: '特別感のある1日を過ごしたい方、歴史に興味がある方',
-	},
+  {
+    name: 'Niigata City Culture and Food Route',
+    duration: '4 hours (half day)',
+    price: 'JPY 36,000 per group (1-4 guests)',
+    meeting: 'JR Niigata Station or central Niigata hotel',
+    season: 'Available all year',
+    walking: 'Easy, about 1.5 km on flat streets',
+    highlights: [
+      'Hakusan Shrine',
+      'Former Saito Family Residence',
+      'Furumachi walking area',
+      'Local lunch guidance'
+    ],
+    driveRoute: [
+      'JR Niigata Station',
+      'Hakusan Shrine',
+      'Former Saito Family Residence',
+      'Furumachi district',
+      'JR Niigata Station'
+    ],
+    driveDistance: 'about 9 km total',
+    driveTime: 'about 30 to 40 minutes total driving',
+    mapUrl:
+      'https://www.google.com/maps/dir/?api=1&origin=Niigata+Station&destination=Niigata+Station&waypoints=Hakusan+Shrine+Niigata|Former+Saito+Family+Residence+Niigata|Furumachi+Niigata&travelmode=driving',
+    idealFor: 'First-time visitors and senior travelers who prefer a relaxed pace.'
+  },
+  {
+    name: 'Yahiko and Teradomari Coast Route',
+    duration: '8 hours (full day)',
+    price: 'JPY 62,000 per group (1-4 guests)',
+    meeting: 'JR Niigata Station or central Niigata hotel',
+    season: 'Best from spring to autumn',
+    walking: 'Moderate, about 3 km total',
+    highlights: [
+      'Yahiko Shrine',
+      'Yahiko mountain views',
+      'Teradomari fish market street',
+      'Seafood lunch guidance'
+    ],
+    driveRoute: [
+      'JR Niigata Station',
+      'Yahiko Shrine',
+      'Yahiko ropeway area (weather dependent)',
+      'Teradomari Fish Market Street',
+      'JR Niigata Station'
+    ],
+    driveDistance: 'about 90 km total',
+    driveTime: 'about 2 hours 30 minutes total driving',
+    mapUrl:
+      'https://www.google.com/maps/dir/?api=1&origin=Niigata+Station&destination=Niigata+Station&waypoints=Yahiko+Shrine+Niigata|Yahiko+Ropeway|Teradomari+Fish+Market+Street&travelmode=driving',
+    idealFor: 'Guests who want nature, shrine culture, and coastal scenery in one day.'
+  },
+  {
+    name: 'Sado Island Heritage and Scenic Route',
+    duration: '9 hours on Sado Island (ferry time excluded)',
+    price: 'JPY 78,000 per group (1-4 guests)',
+    meeting: 'Ryotsu Port, Sado Island',
+    season: 'Best from spring to autumn',
+    walking: 'Moderate, about 2.5 km total',
+    highlights: [
+      'Sado Gold Mine related site',
+      'Shukunegi historic village',
+      'Coastal scenic drive',
+      'Local food guidance'
+    ],
+    driveRoute: [
+      'Ryotsu Port',
+      'Sado Gold Mine area',
+      'Shukunegi village',
+      'Ryotsu Port'
+    ],
+    driveDistance: 'about 95 km total on Sado Island',
+    driveTime: 'about 2 hours 40 minutes total driving',
+    mapUrl:
+      'https://www.google.com/maps/dir/?api=1&origin=Ryotsu+Port&destination=Ryotsu+Port&waypoints=Sado+Kinzan|Shukunegi&travelmode=driving',
+    idealFor: 'Travelers who want a unique full-day experience with history and landscapes.'
+  }
 ];
 ---
 
-<html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="generator" content={Astro.generator} />
-		<meta
-			name="description"
-			content="新潟県限定の通訳案内士サービス。欧米ゲスト向け英語ガイド。3つのモデルルート、料金、所要時間、予約情報をわかりやすく掲載。"
-		/>
-		<meta property="og:title" content="Niigata Private Guide | 新潟県限定通訳案内" />
-		<meta
-			property="og:description"
-			content="欧米系ゲスト向けの新潟プライベートガイド。シニアにも見やすい、わかりやすい観光情報。"
-		/>
-		<meta property="og:type" content="website" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<title>Niigata Private Guide | 新潟県限定 通訳案内士</title>
-	</head>
-	<body>
-		<header class="site-header">
-			<div class="container header-row">
-				<a class="brand" href="#top">Niigata Private Guide</a>
-				<nav class="nav">
-					<a href="#routes">ルート</a>
-					<a href="#details">詳細情報</a>
-					<a href="#contact">予約</a>
-				</nav>
-			</div>
-		</header>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Niigata Prefecture only. Licensed private guide interpreter service in English for Western visitors. Clear route, price, and time details."
+    />
+    <meta property="og:title" content="Niigata Private Guide | Licensed Interpreter Guide" />
+    <meta
+      property="og:description"
+      content="Easy-to-read private tour website for Western guests visiting Niigata, including senior-friendly pacing options."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>Niigata Private Guide | Niigata Only English Tours</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="#top">Niigata Private Guide</a>
+        <nav class="nav">
+          <a href="#routes">Routes</a>
+          <a href="#details">Details</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-		<main id="top">
-			<section class="hero section">
-				<div class="container hero-grid">
-					<div class="hero-copy" data-animate>
-						<p class="eyebrow">Licensed Guide Interpreter | Niigata, Japan</p>
-						<h1>
-							新潟県限定。<br />
-							欧米ゲスト向けの<br />
-							英語プライベートガイド。
-						</h1>
-						<p class="lead">
-							国家資格を持つ通訳案内士が、ゆっくり・はっきり・丁寧にご案内します。
-							年配の方でも安心して楽しめる旅程に調整します。
-						</p>
-						<ul class="hero-points">
-							<li>対応エリア: 新潟県内のみ</li>
-							<li>対応言語: 英語（欧米ゲスト向け）</li>
-							<li>人数: 1-4名の少人数プライベート</li>
-						</ul>
-						<div class="cta-row">
-							<a class="button" href="#contact">空き日程を問い合わせる</a>
-							<a class="button secondary" href="#routes">3ルートを見る</a>
-						</div>
-					</div>
+    <main id="top">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-animate>
+            <p class="eyebrow">Licensed Guide Interpreter | Niigata, Japan</p>
+            <h1>
+              Niigata Prefecture only.<br />
+              Private English tours<br />
+              for Western visitors.
+            </h1>
+            <p class="lead">
+              A nationally licensed guide interpreter offers clear, calm, and easy-to-follow support.
+              Tour pacing is adjusted for senior guests and families.
+            </p>
+            <ul class="hero-points">
+              <li>Area: Niigata Prefecture only</li>
+              <li>Language: English</li>
+              <li>Group size: 1 to 4 guests per booking</li>
+            </ul>
+            <div class="cta-row">
+              <a class="button" href="#contact">Check availability</a>
+              <a class="button secondary" href="#routes">View 3 routes</a>
+            </div>
+          </div>
 
-					<aside class="hero-panel" data-animate style="--delay: 160ms;">
-						<h2>シニア旅行にやさしい対応</h2>
-						<ul>
-							<li>大きい文字で見やすい旅程表を用意</li>
-							<li>休憩を多めに入れた行程に調整</li>
-							<li>歩行距離を短くするアレンジ可能</li>
-							<li>集合場所までの案内を事前に共有</li>
-						</ul>
-					</aside>
-				</div>
-			</section>
+          <aside class="hero-panel" data-animate style="--delay: 160ms;">
+            <h2>Senior-friendly support</h2>
+            <ul>
+              <li>Large-text schedule available on request</li>
+              <li>More breaks can be included</li>
+              <li>Shorter walking plans available</li>
+              <li>Simple pre-tour meeting instructions</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
 
-			<section id="routes" class="section">
-				<div class="container">
-					<h2>おすすめ3ルート</h2>
-					<p class="section-copy">
-						すべて税込価格です。料金はガイド料（1組あたり）です。交通費・入館料・飲食代は別途です。
-					</p>
+      <section class="section scenic-section">
+        <div class="container">
+          <h2>Niigata scenery in your background</h2>
+          <p class="section-copy">
+            The page background uses real Niigata sightseeing photos: Bandai Bridge, Yahiko Shrine, and Sado Gold Mine area.
+          </p>
+          <div class="scenic-grid" data-animate>
+            <article class="scenic-card scenic-city">
+              <h3>Bandai Bridge</h3>
+              <p>Niigata City</p>
+            </article>
+            <article class="scenic-card scenic-yahiko">
+              <h3>Yahiko Shrine</h3>
+              <p>Yahiko</p>
+            </article>
+            <article class="scenic-card scenic-sado">
+              <h3>Sado Gold Mine Area</h3>
+              <p>Sado Island</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-					<div class="route-grid">
-						{
-							routes.map((route, index) => (
-								<article class="route-card" data-animate style={`--delay: ${index * 120 + 120}ms;`}>
-									<h3>{route.nameJa}</h3>
-									<p class="route-en">{route.nameEn}</p>
+      <section id="routes" class="section">
+        <div class="container">
+          <h2>Three recommended routes</h2>
+          <p class="section-copy">
+            All prices are tax included guide fees per group. Transport, entrance fees, meals, and ferry tickets are separate.
+          </p>
 
-									<dl class="route-meta">
-										<div>
-											<dt>所要時間</dt>
-											<dd>{route.duration}</dd>
-										</div>
-										<div>
-											<dt>料金</dt>
-											<dd class="price">{route.price}</dd>
-										</div>
-										<div>
-											<dt>集合場所</dt>
-											<dd>{route.meeting}</dd>
-										</div>
-										<div>
-											<dt>おすすめ時期</dt>
-											<dd>{route.season}</dd>
-										</div>
-										<div>
-											<dt>歩行レベル</dt>
-											<dd>{route.walking}</dd>
-										</div>
-									</dl>
+          <div class="route-grid">
+            {
+              routes.map((route, index) => (
+                <article class="route-card" data-animate style={`--delay: ${index * 120 + 120}ms;`}>
+                  <h3>{route.name}</h3>
 
-									<h4>主な見どころ</h4>
-									<ul class="highlights">
-										{route.highlights.map((spot) => <li>{spot}</li>)}
-									</ul>
+                  <dl class="route-meta">
+                    <div>
+                      <dt>Duration</dt>
+                      <dd>{route.duration}</dd>
+                    </div>
+                    <div>
+                      <dt>Price</dt>
+                      <dd class="price">{route.price}</dd>
+                    </div>
+                    <div>
+                      <dt>Meeting point</dt>
+                      <dd>{route.meeting}</dd>
+                    </div>
+                    <div>
+                      <dt>Best season</dt>
+                      <dd>{route.season}</dd>
+                    </div>
+                    <div>
+                      <dt>Walking level</dt>
+                      <dd>{route.walking}</dd>
+                    </div>
+                  </dl>
 
-									<p class="ideal-for">おすすめ: {route.idealFor}</p>
-								</article>
-							))
-						}
-					</div>
-				</div>
-			</section>
+                  <h4>Highlights</h4>
+                  <ul class="highlights">
+                    {route.highlights.map((spot) => <li>{spot}</li>)}
+                  </ul>
 
-			<section id="details" class="section alt">
-				<div class="container detail-grid">
-					<article class="info-card" data-animate>
-						<h2>料金に含まれるもの</h2>
-						<ul>
-							<li>通訳案内士のガイド料</li>
-							<li>事前ヒアリング（希望・体力・食事制限）</li>
-							<li>当日の旅程サポート</li>
-							<li>英語での文化・歴史説明</li>
-						</ul>
-					</article>
+                  <h4>Driving route</h4>
+                  <ol class="drive-route">
+                    {route.driveRoute.map((stop) => <li>{stop}</li>)}
+                  </ol>
+                  <p class="drive-meta">
+                    <strong>Estimated driving:</strong> {route.driveDistance} / {route.driveTime}
+                  </p>
+                  <a class="map-link" href={route.mapUrl} target="_blank" rel="noopener noreferrer">
+                    Open driving map
+                  </a>
 
-					<article class="info-card" data-animate style="--delay: 120ms;">
-						<h2>料金に含まれないもの</h2>
-						<ul>
-							<li>交通費（電車・タクシー・フェリー等）</li>
-							<li>施設入場料</li>
-							<li>食事・飲み物代</li>
-							<li>旅行保険</li>
-						</ul>
-					</article>
+                  <p class="ideal-for">Best for: {route.idealFor}</p>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
 
-					<article class="info-card" data-animate style="--delay: 240ms;">
-						<h2>予約前に知っておきたい情報</h2>
-						<ul>
-							<li>開始時間: 9:00 / 10:00 / 11:00 から選択</li>
-							<li>支払い: 銀行振込またはクレジットカード</li>
-							<li>キャンセル: 7日前まで無料、6-2日前50%、前日-当日100%</li>
-							<li>対応言語: 英語（日本語サポート可）</li>
-						</ul>
-					</article>
-				</div>
-			</section>
+      <section id="details" class="section alt">
+        <div class="container detail-grid">
+          <article class="info-card" data-animate>
+            <h2>Included</h2>
+            <ul>
+              <li>Licensed guide interpreter service</li>
+              <li>Pre-tour planning call or message</li>
+              <li>Day-of itinerary support</li>
+              <li>English explanations of local culture and history</li>
+            </ul>
+          </article>
 
-			<section id="contact" class="section">
-				<div class="container contact-box" data-animate>
-					<h2>お問い合わせ・予約</h2>
-					<p>
-						希望日、人数、希望ルート、体力レベル（ゆっくり希望など）をお知らせください。
-						24時間以内に返信します。
-					</p>
-					<p class="contact-line"><strong>Email:</strong> guide.niigata@example.com</p>
-					<p class="contact-line"><strong>Tel:</strong> 025-000-0000（9:00-18:00）</p>
-					<a class="button" href="mailto:guide.niigata@example.com?subject=Niigata Tour Request">
-						メールで問い合わせる
-					</a>
-				</div>
-			</section>
-		</main>
+          <article class="info-card" data-animate style="--delay: 120ms;">
+            <h2>Not included</h2>
+            <ul>
+              <li>Transport costs (train, taxi, ferry, etc.)</li>
+              <li>Entrance tickets</li>
+              <li>Meals and drinks</li>
+              <li>Travel insurance</li>
+            </ul>
+          </article>
 
-		<footer class="site-footer">
-			<div class="container">
-				<p>Niigata Private Guide | 新潟県限定 通訳案内士サービス</p>
-			</div>
-		</footer>
-	</body>
+          <article class="info-card" data-animate style="--delay: 240ms;">
+            <h2>Booking information</h2>
+            <ul>
+              <li>Start time options: 9:00, 10:00, or 11:00</li>
+              <li>Payment: bank transfer or credit card</li>
+              <li>Cancellation: free until 7 days before, 50% from 6 to 2 days, 100% on the day before and day of tour</li>
+              <li>Service language: English</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-box" data-animate>
+          <h2>Contact and reservation</h2>
+          <p>
+            Please send your preferred date, number of guests, route choice, and walking comfort level.
+            We reply within 24 hours.
+          </p>
+          <p class="contact-line"><strong>Email:</strong> guide.niigata@example.com</p>
+          <p class="contact-line"><strong>Tel:</strong> 025-000-0000 (9:00-18:00)</p>
+          <a class="button" href="mailto:guide.niigata@example.com?subject=Niigata Tour Request">
+            Send email inquiry
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Niigata Private Guide | Licensed English Guide Service in Niigata</p>
+      </div>
+    </footer>
+  </body>
 </html>
